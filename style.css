@@ -1,0 +1,164 @@
+/* ***************************
+   * Custom Font
+   *************************** */
+@font-face {
+    font-family: 'NotCourierSansBold';
+    src: url('/static/NotCourierSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotCourierSansRegular';
+    src: url('/static/NotCourierSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ***************************
+   * Link Styles
+   *************************** */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ***************************
+   * Image Styles
+   *************************** */
+figcaption {
+    text-align: center;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+/* ***************************
+   * Main Flex Alignment
+   *************************** */
+body {
+    /* Color variables */
+    --bg-color: black;
+    --text-color: white;
+
+    /* Width & Height variables */
+    --header-width: 400px;
+
+    /* Spacing variables */
+    --spacing-large: 14px;
+    --spacing-standard: 6px;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'NotCourierSansRegular';
+    font-size: 14px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+div#content {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+div#content > .item {
+    flex: 0 1 auto;
+}
+
+div#content > .item-greedy {
+    flex: 1 !important;
+}
+
+/* ***************************
+   * Content: Main Title
+   *************************** */
+div#content > span.sub-title {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+div#content > span.title {
+    font-family: 'NotCourierSansBold';
+    font-size: 36px;
+}
+
+/* ***************************
+   * Content: Menu Items
+   *************************** */
+div#content > div.menu {
+    max-width: 448px;
+    width: 100%;
+}
+
+div#content > div.menu > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/* ***************************
+   * Content: Header
+   *************************** */
+div#content > #header {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    max-width: var(--header-width);
+}
+
+@media (max-width: 400px) {
+    div#content > #header {
+        margin: 0 var(--large-spacing);
+    }
+}
+
+/* ***************************
+   * Content: Footer
+   *************************** */
+div#content > #footer {
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+}
+
+/* ***************************
+   * Content: Separator
+   *************************** */
+div#content > .separator:before {
+    content: "----";
+}
+
+div#content > .separator {
+    font-size: 24px;
+}
+
+/* ***************************
+   * Helpers
+   *************************** */
+.margin-bottom-large {
+    margin-bottom: var(--spacing-large) !important;
+}
+
+.margin-bottom-standard {
+    margin-bottom: var(--spacing-standard) !important;
+}
+
+.margin-top-standard {
+    margin-top: var(--spacing-standard) !important;
+}
