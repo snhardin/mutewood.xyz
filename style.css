@@ -86,14 +86,9 @@ div#content > .item-greedy {
 /* ***************************
    * Content: Main Title
    *************************** */
-div#content > span.sub-title {
-    font-size: 1.3rem;
-    font-style: italic;
-}
-
 div#content > span.title {
     font-family: 'NotCourierSansBold';
-    font-size: 2.2rem;
+    font-size: 2.5rem;
 }
 
 /* ***************************
